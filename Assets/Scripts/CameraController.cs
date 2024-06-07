@@ -9,12 +9,11 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         _player = GameObject.FindWithTag("Player");
-        _camera = this.gameObject;
-
+        _camera = Camera.main.gameObject;
     }
     void Update()
     {
         _camera.transform.forward = _player.transform.forward;
-        _camera.transform.position = new Vector3(_player.transform.position.x - 15, 5, _player.transform.position.z);
+        _camera.transform.position = new Vector3(_player.transform.position.x, 5, _player.transform.position.z - 15);
     }
 }
