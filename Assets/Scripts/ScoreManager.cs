@@ -16,20 +16,15 @@ public class ScoreManager : MonoBehaviour
         {
             return _scoreCount;
         }
-        private set
+        set
         {
             _scoreCount = value;
+            _scoreText.text = _scoreCount.ToString();
         }
     }
 
     private void Awake()
     {
         Instance = this;
-    }
-
-    public void AddScore(int x)
-    {
-        ScoreCount += x;
-        _scoreText.text = _scoreCount.ToString();
     }
 }

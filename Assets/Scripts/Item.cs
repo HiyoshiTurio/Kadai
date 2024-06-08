@@ -8,7 +8,7 @@ public class Item : MonoBehaviour
     [SerializeField] private int _score = 1;
     private void OnTriggerEnter(Collider other)
     {
-        ScoreManager.Instance.AddScore(_score);
+        ScoreManager.Instance.ScoreCount += _score;
         Destroy(this.gameObject);
     }
 }
